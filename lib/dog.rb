@@ -1,4 +1,5 @@
-attr_accessor :name 
+class Dog
+attr_accessor :name
 
   @@all = []
 
@@ -6,5 +7,20 @@ attr_accessor :name
     @name = name
     @@all << self
   end
+
+  def self.all
+   @@all.each do |dogObject|
+     puts dogObject.name
+   end
+ end
+
+ def self.clear_all
+     @@all.clear
+end
+
+end
+
+   
+  
 
   
